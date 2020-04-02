@@ -17,19 +17,23 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   
   allowNewServer = false;
+  serverCreationStatus = 'No server was created';
 
   constructor() { 
+
      //After 2000 miliseconds (2 seconds), I want to execute a function
      //Pass the arguments on the () and describes the function on the {}
     setTimeout(() => {
       this.allowNewServer = true;
-    }, 2000);{
-        
-    }
+    }, 2000);{}
 
   }
 
   ngOnInit(): void {
+  }
+
+  onCreateServer(){
+    this.serverCreationStatus = 'Server was created';
   }
 
 }
