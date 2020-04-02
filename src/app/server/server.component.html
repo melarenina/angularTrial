@@ -1,1 +1,2 @@
-<p> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+<!--The directive name is just ngStyle. It will receive javascript value-->
+<p [ngStyle]="{backgroundColor: getColor()}"> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
