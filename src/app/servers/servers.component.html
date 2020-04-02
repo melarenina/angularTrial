@@ -43,6 +43,7 @@
     </p>
 </ng-template>
 
-<app-server></app-server>
-<app-server></app-server>
+<!--let server -> temporary variable to use inside the loop-->
+<!--servers -> array defined in the TypeScript file-->
+<app-server *ngFor="let server of servers"></app-server>
 
