@@ -1,2 +1,7 @@
 <!--The directive name is just ngStyle. It will receive javascript value-->
-<p [ngStyle]="{backgroundColor: getColor()}"> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+<!--ngClass is configured in the Sytles on ser server.component.ts-->
+<!--ngClass: you pass the class name, and the condition-->
+<p 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: serverStatus === 'online'}"
+> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
