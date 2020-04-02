@@ -11,12 +11,23 @@ import { Component, OnInit } from '@angular/core';
     <app-server></app-server>
     <app-server></app-server>`*/ 
   
-    templateUrl: './servers.component.html',
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  
+  allowNewServer = false;
 
-  constructor() { }
+  constructor() { 
+     //After 2000 miliseconds (2 seconds), I want to execute a function
+     //Pass the arguments on the () and describes the function on the {}
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);{
+        
+    }
+
+  }
 
   ngOnInit(): void {
   }
