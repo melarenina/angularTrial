@@ -1,4 +1,4 @@
-<label>Server Name</label>
+<label style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;">Server Name</label>
 <!--<input 
     type="text" 
     class="form-control"
@@ -11,8 +11,8 @@
     class="form-control"
     [(ngModel)]="serverName" 
 >
+<hr>
 
-<br />
 <br />
 
 <!--
@@ -31,7 +31,18 @@
 <br />
 
 <!--<p [innetText]="allowNewServer"></p>-->
-<p>{{ serverCreationStatus }}</p>
+<!--<p>{{ serverCreationStatus }}</p> -->
+
+<!--Using directive. The * is required-->
+<p *ngIf="serverCreated; else noServer">Server was created! Server name is {{ serverName }}</p>
+<!--Local referente to when the above condition it's not true-->
+<!--Ng template is a template element that Angular uses with structural directives-->
+<ng-template #noServer>
+    <p>
+        No server was created
+    </p>
+</ng-template>
+
 <app-server></app-server>
 <app-server></app-server>
 
